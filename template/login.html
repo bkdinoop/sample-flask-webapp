@@ -6,6 +6,9 @@
  </head>
  <body class="LoginBody">
   <div class="content">
+     {% for message in get_flashed_messages() %}
+          <div class="flash btn-warning">{{ message }}</div>
+     {% endfor %}
     <form action="{{url_for('login')}}" method="post" name="LoginForm" id="LoginForm">
      <div style="display:none;">
       <input id="csrf_token" name="csrf_token" type="hidden" value="None">
