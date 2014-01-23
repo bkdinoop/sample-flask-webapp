@@ -1,0 +1,4 @@
+Installation for postgresql and python drivers
+----------------------------------------------
+apt-get install -y postgresql postgresql-contrib
+apt-get install -y postgresql-server-dev-all
