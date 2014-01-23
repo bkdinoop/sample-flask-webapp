@@ -13,6 +13,12 @@ metadata = MetaData(bind=engine)
 userdetails = Table("userdetails", metadata, autoload=True)
 
 def login_auth(username, pword):
+    """
+    Created a table userdetails with two column name, password
+    parameters ::
+    username : string
+    pword :  string
+    """
     stm = userdetails.select(and_(userdetails.c.name == username, userdetails.c.password == pword))
     result = stm.execute()
     if result.rowcount > 0:
